@@ -1,0 +1,56 @@
+{% extends 'judges/base.html' %}
+
+{% block body %}
+
+<h1>Problem</h1>
+<hr>
+<!-- 문제 정보 패널, id = question_header -->
+<div id="question_header" class="card">
+    <div class="card-header text-right">
+        {{ q_date }} _ {{ q_org }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-right text-warning">{{ subject }} 영역 {{ q_num }}번</h5>
+        <h4 class="card-text">{{ header }}</h4>
+    </div>
+</div>
+<!-- 문제 본문 위치 -->
+
+<div class="textbox mt-5 mx-5 p-3">
+    <p style="font-size: 1.5rem;">{{ content }}</p>
+</div>
+<!-- 답안 선택 부분 -->
+<div class="container p-1 mx-5" style="font-size: 1.5rem;">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            {{ examples.1 }}
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+            {{ examples.2 }}
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+            {{ examples.3 }}
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+            {{ examples.4 }}
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+            {{ examples.5 }}
+        </label>
+    </div>
+</div>
+
+{% endblock %}
