@@ -1,0 +1,59 @@
+{% extends 'judges/base.html' %}
+
+{% block body %}
+
+<h1>Problem</h1>
+<hr>
+<!-- 문제 정보 패널, id = question_header -->
+<div id="question_header" class="card">
+    <div class="card-header text-right">
+        {{ problem.q_date }} _ {{ problem.q_org }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-right text-warning">{{ problem.subject }} 영역 {{ problem.q_num }}번</h5>
+        <h4 class="card-text">{{ problem.header }}</h4>
+    </div>
+</div>
+<!-- 문제 본문 위치 -->
+
+<div class="textbox mt-5 mx-5 p-3">
+    <p style="font-size: 1.5rem;">{{ problem.content }}</p>
+</div>
+<!-- 답안 선택 부분 -->
+<!--  -->
+<form class="container p-1 mx-5" style="font-size: 1.5rem;" method="POST" action="#">
+    {% csrf_token %}
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio1" value="option1" checked>
+        <label class="form-check-label" for="q_radio1">
+            {{ examples.example_1 }}
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio2" value="option2">
+        <label class="form-check-label" for="q_radio2">
+            {{ examples.example_2 }}
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio2" value="option2">
+        <label class="form-check-label" for="q_radio2">
+            {{ examples.example_3 }}
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio2" value="option2">
+        <label class="form-check-label" for="q_radio2">
+            {{ examples.example_4 }}
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio2" value="option2">
+        <label class="form-check-label" for="q_radio2">
+            {{ examples.example_5 }}
+        </label>
+    </div>
+    <input type="submit" value="Submit">
+</div>
+
+{% endblock %}
