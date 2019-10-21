@@ -1,14 +1,17 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Problem
+from .models import Problem,Example
 from . import views
 # Create your views here.
 
 
 def judge(request, problem_id):
-    # problem = get_object_or_404(Problem, id=problem_id)
-    # 테스트 완료후에 주석 해제
-    # db 설계 절실...
-    problem = {
+    problem = get_object_or_404(Problem, id=problem_id)
+    examples = get_object_or_404(Example, problem=problem_id)
+    context = {
+        'problem':problem,
+        'examples':examples,
+    }
+    problem_test = {
         'id': 1,
         'subject': '외국어',
         'category': '문법',
@@ -26,7 +29,7 @@ def judge(request, problem_id):
             '5': '(A): were , (B): however , (C): done',
         },
     }
-    return render(request, 'judges/judge.html', problem)
+    return render(request, 'judges/judge.html', context)
 
 
 def result(request, problem_id):
