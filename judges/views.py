@@ -3,6 +3,7 @@ from .models import Problem
 from . import views
 # Create your views here.
 
+
 def judge(request, problem_id):
     # problem = get_object_or_404(Problem, id=problem_id)
     # 테스트 완료후에 주석 해제
@@ -29,4 +30,4 @@ def judge(request, problem_id):
 
 
 def result(request, problem_id):
-    pass
+    return render(request, 'judges/result.html', )

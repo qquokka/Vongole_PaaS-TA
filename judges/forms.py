@@ -1,9 +1,8 @@
 from django import forms
-from django.forms.widgets import RadioSelect
+from django.forms.widgets import SelectMultiple
+from .models import Example
 
-
-class QuestionForm(forms.ModelForm):
-    def __init__(self, question, *args, **kwargs):
-        super(QuestionForm, self).__init__(*args, **kwargs)
-        choice_list = [x for x in question.get_answers_list()]
-        self.fields["answers"] = forms.ChoiceField(choices=choice_list, widget=RadioSelect)
+class ExampleForm(forms.widgets.Select):
+    class Meta:
+        model = Example
+        fields = "__all__"
