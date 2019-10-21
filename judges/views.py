@@ -26,3 +26,7 @@ def judge(request, problem_id):
         },
     }
     return render(request, 'judges/judge.html', problem)
+
+
+def result(request, problem_id):
+    pass

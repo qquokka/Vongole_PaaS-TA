@@ -20,37 +20,39 @@
     <p style="font-size: 1.5rem;">{{ content }}</p>
 </div>
 <!-- 답안 선택 부분 -->
-<div class="container p-1 mx-5" style="font-size: 1.5rem;">
+<form class="container p-1 mx-5" style="font-size: 1.5rem;" method="POST" action="#">
+    {% csrf_token %}
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio1" value="option1" checked>
+        <label class="form-check-label" for="q_radio1">
             {{ examples.1 }}
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio2" value="option2">
+        <label class="form-check-label" for="q_radio2">
             {{ examples.2 }}
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio2" value="option2">
+        <label class="form-check-label" for="q_radio2">
             {{ examples.3 }}
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio2" value="option2">
+        <label class="form-check-label" for="q_radio2">
             {{ examples.4 }}
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="q_radio" id="q_radio2" value="option2">
+        <label class="form-check-label" for="q_radio2">
             {{ examples.5 }}
         </label>
     </div>
+    <input type="submit" value="Submit">
 </div>
 
 {% endblock %}
