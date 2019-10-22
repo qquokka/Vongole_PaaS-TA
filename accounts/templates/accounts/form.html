@@ -1,0 +1,11 @@
+{% extends 'accounts/base.html' %}
+{% load bootstrap4 %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <input type="submit" value="확인">
+    {% endbuttons %}
+</form>
+{% endblock %}

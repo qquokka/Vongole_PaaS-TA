@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('accounts/', include('accounts.urls')),
-    path('problems/', include('problems.urls')),
+    path('judges/', include('judges.urls')),
+>>>>>>> upstream/master
 ]

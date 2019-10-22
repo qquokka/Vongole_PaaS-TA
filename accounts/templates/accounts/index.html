@@ -1,0 +1,15 @@
+{% extends 'accounts/base.html' %}
+
+{% block body %}
+{% if user.is_authenticated %}
+<p>{{ user.username }}</p>
+<p>{{ user.nickname }}</p>
+<p>{{ user.dream_univ }}</p>
+<p>{{ user.curriculum }}</p>
+<p>{{ user.elective_subject1 }}</p>
+<p>{{ user.elective_subject2 }}</p>
+<p>{{ user.second_foreign_lang }}</p>
+{% else %}
+<p>로그아웃된 상태</p>
+{% endif %}
+{% endblock %}
