@@ -1,0 +1,20 @@
+{% extends 'problems/base.html' %}
+{% block body %}
+<h1>카테고리 선택</h1>
+<form action="">
+    <div>
+        {% if subject == '언어' %}
+        <input type="radio" name="category"" id="" value="비문학">비문학
+        <input type="radio" name="category"" id="" value="문학">문학
+        {% elif subject == '수리' %}
+        <input type="radio" name="category"" id="" value="벡터">벡터
+        <input type="radio" name="category"" id="" value="기하학">기하학
+        {% elif subject == '외국어' %}
+        <input type="radio" name="category"" id="" value="문법">문법
+        <input type="radio" name="category"" id="" value="단어">단어
+        {% endif %}
+    </div>
+    <br>
+    <input type="submit" value="문제 풀이 시작">
+</form>
+{% endblock %}
