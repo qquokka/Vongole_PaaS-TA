@@ -1,0 +1,101 @@
+{% extends 'problems/base.html' %}
+{% block body %}
+<h1><현재까지 문제풀이 성적표 개요></h1>
+<div>
+    <table style="border: 1px solid black">
+        <thead>
+            <tr>
+                <th>과목</td>
+                <th>언어</td>
+                <th>수리</td>
+                <th>외국어</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>전체 문제</td>
+                <td>32</td>
+                <td>43</td>
+                <td>53</td>
+            </tr>
+            <tr>
+                <th>시도한 문제</td>
+                <td>20</td>
+                <td>22</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <th>맞춘 문제</td>
+                <td>18</td>
+                <td>19</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th>정답률</td>
+                <td>90.0%</td>
+                <td>86.3%</td>
+                <td>32.3%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<br>
+<div>
+        <table style="border: 1px solid black">
+            <thead >
+                <tr>
+                    <td>과목</td>
+                    <td colspan="2">언어</td>
+                    <td colspan="2">수리</td>
+                    <td colspan="2">외국어</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>유형</td>
+                    <td>비문학</td>
+                    <td>문학</td>
+                    <td>벡터</td>
+                    <td>기하학</td>
+                    <td>문법</td>
+                    <td>단어</td>
+                </tr>
+                <tr>
+                    <td>시도한 문제</td>
+                    <td>20</td>
+                    <td>22</td>
+                    <td>31</td>
+                    <td>20</td>
+                    <td>22</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>맞춘 문제</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>10</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>정답률</td>
+                    <td>90.0%</td>
+                    <td>86.3%</td>
+                    <td>32.3%</td>
+                    <td>90.0%</td>
+                    <td>86.3%</td>
+                    <td>32.3%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+<br>
+<div>
+    <form action="subject/">
+        <input type="submit" value="과목 선택하기" style="text-align: center;">
+    </form>
+</div>
+{% endblock %}

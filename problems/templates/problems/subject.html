@@ -1,0 +1,13 @@
+{% extends 'problems/base.html' %}
+{% block body %}
+<h1>과목 선택</h1>
+<form action="category/">
+    <div>
+        <input type="radio" name="subject" id="" value="언어">언어
+        <input type="radio" name="subject" id="" value="수리">수리
+        <input type="radio" name="subject" id="" value="외국어">외국어
+    </div>
+    <br>
+    <input type="submit" value="유형 선택하기">
+</form>
+{% endblock %}
